@@ -13,8 +13,6 @@ public class GameExercises extends GamePanel {
 	    canvas.setColor(Color.GREEN);
 	    canvas.fillRect(400, 350, 100, 100);
 	    canvas.setColor(Color.BLUE);
-	    Font f = new Font("Helvetica Nueue", Font.BOLD, 24);
-		canvas.setFont(f);
 	    canvas.drawString("Exercise 1", 30, 50);
 	}
 }
