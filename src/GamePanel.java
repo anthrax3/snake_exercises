@@ -6,7 +6,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
 import java.util.Arrays;
-import java.util.Random;
 
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -14,19 +13,11 @@ import javax.swing.Timer;
 
 @SuppressWarnings("serial")
 public abstract class GamePanel extends JPanel implements ActionListener {
-	// Sets the width and height of the canvas to 300x300
+	// Sets the width and height of the canvas to 600x600
 	private final int WIDTH = 600;
 	private final int HEIGHT = 600;
 	
-	int[] x;
-	int[] y;
-	int size = 25;
-	int xStart = 300;
-	int yStart = 300;
-	String direction;
-	int snakeLength;
-	int appleX;
-	int appleY;
+	int drawSize = 25;
 	boolean isGameRunning;
 
 	// Creates a timer which 'ticks' and will trigger
@@ -37,15 +28,6 @@ public abstract class GamePanel extends JPanel implements ActionListener {
 
 	public GamePanel() {
 		setFocusable(true);
-		snakeLength = 3;
-		direction = "up";
-		x = new int[] { xStart, xStart, xStart, xStart };
-		y = new int[] { yStart, yStart + size, 
-				yStart + (size * 2), 
-				yStart + (size * 3) };
-		appleX = 150;
-		appleY = 150;
-		
 		addKeyListener(new GameKeyListener());
 		timer = new Timer(150, this);
 		startGame();
@@ -69,14 +51,14 @@ public abstract class GamePanel extends JPanel implements ActionListener {
 	}
 	
 	protected int randomCoordForPanel(int max) {
-		int multiplier = max / size;
+		int multiplier = max / drawSize;
 		int randomCoordinate = (int) (Math.random() * multiplier);
-		return randomCoordinate * size;
+		return randomCoordinate * drawSize;
 	}
 	
 	protected boolean hasObjectCollision(int x1, int y1, int x2, int y2) {
-		Rectangle rx1 = new Rectangle(x1, y1, size, size);
-	    Rectangle rx2 = new Rectangle(x2, y2, size, size);
+		Rectangle rx1 = new Rectangle(x1, y1, drawSize, drawSize);
+	    Rectangle rx2 = new Rectangle(x2, y2, drawSize, drawSize);
 	    return rx1.intersects(rx2);
 	}
 
