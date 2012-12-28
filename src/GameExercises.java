@@ -35,17 +35,15 @@ public class GameExercises extends GamePanel {
 	public void drawSnake(Graphics canvas, int size, int[] x, int[] y) {
 		Color c = Color.GREEN;
 		canvas.setColor(c);
-	    canvas.fillRect(x[0], y[0], size, size);
-	    canvas.fillRect(x[1], y[1], size, size);
-	    canvas.fillRect(x[2], y[2], size, size);
-	    canvas.fillRect(x[3], y[3], size, size);
+		for (int ind = 0; ind < x.length; ind++) {
+	      canvas.fillRect(x[ind], y[ind], size, size);
+		}
 	}
 	
 	// Moves the coordinates for snake up
 	public void moveUp(int[] x, int[] y) {
-		y[3] = y[3] - size;
-		y[2] = y[2] - size;
-		y[1] = y[1] - size;
-		y[0] = y[0] - size;
+		for (int ind = 0; ind < x.length; ind++) {
+			y[ind] = y[ind] - size;
+		}
 	}
 }
