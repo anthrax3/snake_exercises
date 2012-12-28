@@ -3,14 +3,20 @@ Exercise 5 - Conditionals
 
 Goal: Use conditionals to complete the snakes game!
 
-Description: In this exercise, we will refactor our code to use loops,
-so that we can change the length of the snake.
+Description: In this exercise, we will complete the game logic to
+detect snake collisions, grow the snake, place the apple.
 
 Instructions:
   1) Open GameExercises.java
-
-
-
-- Conditionals
-  - Introduce proper move logic based on current direction
-  - Add bounds collision logic of snake and apple.
+  2) Modify onTimer to call the following methods:
+    a) checkApple
+      - If the snake is on the apple tile, then increase the snake length
+      and move the apple.
+    b) checkBoundsCollision
+      - Check for collision w/ walls or the snake with itself
+    c) moveSnake
+      - Advance the snake in the direction it's currently moving
+  3) onKeyPress
+    - Change the direction of the snake.  Note that if the snake is already
+    traveling up, it cannot immediately turn down, it can only go left or
+    right.
