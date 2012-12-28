@@ -1,31 +1,12 @@
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
-import java.awt.event.ActionEvent;
 
 @SuppressWarnings("serial")
-public class GameExercises extends GamePanel {
-	int[] x;
-	int[] y;
-	int size;
-	
-	public GameExercises() {
-		// Keep the array and variables from exercise 2
-	    size = 25;
-	    int xStart = 300;
-	    int yStart = 300;
-	    
-	    // Add an array for snake positions (x and y)
-	    x = new int[] { xStart, xStart, xStart, xStart };
-	    y = new int[] { yStart, yStart + size + 1, 
-	    		yStart + (size * 2) + 2, 
-	    		yStart + (size * 3) + 3 };
-	    
-		startGame();
-	}
+public class GameExercises extends GamePanel {	
 	
 	// Implement the drawing here
-	public void paintComponent(Graphics canvas) {	
+	public void redrawCanvas(Graphics canvas) {	
 		// Keep the apple we drew from exercise 1
 		canvas.setColor(Color.RED);
 	    canvas.fillOval(150, 150, 25, 25);
@@ -38,6 +19,13 @@ public class GameExercises extends GamePanel {
 	    drawSnake(canvas, size, x, y);
 	}
 	
+	// This method is called once a second, and it is a good place to
+	// do things like check if the snake has collided into the wall
+	// or the apple.
+	public void onTimer() {
+		moveUp(x, y);
+	}
+	
 	public void drawSnake(Graphics canvas, int size, int[] x, int[] y) {
 		Color c = Color.GREEN;
 		canvas.setColor(c);
@@ -47,13 +35,11 @@ public class GameExercises extends GamePanel {
 	    canvas.fillRect(x[3], y[3], size, size);
 	}
 	
-	public void actionPerformed(ActionEvent e) {
-		moveUp(x, y);
-		repaint();
-	}
-	
 	// Moves the coordinates for snake up
 	public void moveUp(int[] x, int[] y) {
-		
+		y[3] = y[3] - size;
+		y[2] = y[2] - size;
+		y[1] = y[1] - size;
+		y[0] = y[0] - size;
 	}
 }
