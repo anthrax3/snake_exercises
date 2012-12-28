@@ -1,6 +1,5 @@
 package codepath.snake.objects;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 
@@ -23,12 +22,12 @@ public class Snake {
 
 	// Returns the x coordinate position of the snake's head
 	public int getHeadPosX() {
-		
+		return -1;
 	}
 
 	// Returns the y coordinate position of the snake's head
 	public int getHeadPosY() {
-		
+		return -1;
 	}
 
 	// Increases the length of the snake's tail by 1
@@ -41,7 +40,7 @@ public class Snake {
 	// Returns the direction the snake is headed
 	// Direction is up, down, left or right
 	public String getDirection() {
-		
+		return null;
 	}
 
 	// Updates the direction the snake is headed
@@ -54,7 +53,7 @@ public class Snake {
 	// This is a game over condition when the head runs into any part of the body
 	// We need to check for a collision
 	public boolean hasHitTail() {
-		
+		return false;
 	}
 
 	// Moves the snake position coordinates in the direction he is heading.

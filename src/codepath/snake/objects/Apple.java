@@ -1,6 +1,5 @@
 package codepath.snake.objects;
 
-import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
 
@@ -19,12 +18,12 @@ public class Apple {
 	
 	// Returns the x coordinate position for the apple
 	public int getPosX() {
-
+		return -1;
 	}	
 	
 	// Returns the y coordinate position for the apple
 	public int getPosY() {
-
+		return -1;
 	}
 	
 	// Update the position for the apple given the x and y coordinates
