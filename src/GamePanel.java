@@ -29,7 +29,7 @@ public abstract class GamePanel extends JPanel implements ActionListener {
 	public GamePanel() {
 		setFocusable(true);
 		addKeyListener(new GameKeyListener());
-		timer = new Timer(150, this);
+		timer = new Timer(130, this);
 		startGame();
 	}
 

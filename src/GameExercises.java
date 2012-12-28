@@ -8,10 +8,12 @@ public class GameExercises extends GamePanel {
 	
 	private Snake snake;
 	private Apple apple;
+	private Hole hole;
 	
 	public GameExercises() {
 		snake = new Snake(drawSize);
 		apple = new Apple(drawSize);
+		hole  = new Hole(drawSize);
 	}
 
 	// This method is called once a second to redraw the canvas,
@@ -20,6 +22,7 @@ public class GameExercises extends GamePanel {
 		drawLabel(canvas);
 		apple.draw(canvas);
 		snake.draw(canvas);
+		hole.draw(canvas);
 	}
 
 	// This method is called once a second, and it is a good place to
@@ -58,6 +61,11 @@ public class GameExercises extends GamePanel {
 			isGameRunning = false;
 		}
 		
+		// Check if snake hit hole
+		if (snake.getHeadPosX() == hole.getPosX() && snake.getHeadPosY() == hole.getPosY()) {
+			isGameRunning = false;
+		}
+		
 		// Check if snake ran into the boundaries of the game board
 		// Game is over if the snake head are outside board bounds
 		if (snake.getHeadPosX() < 0 || snake.getHeadPosX() > getPanelWidth()) {
@@ -86,7 +94,7 @@ public class GameExercises extends GamePanel {
 		canvas.setColor(Color.BLUE);
 		Font f = new Font("Helvetica Nueue", Font.BOLD, 24);
 		canvas.setFont(f);
-		canvas.drawString("Exercise 6", 50, 50);
+		canvas.drawString("Exercise 7", 50, 50);
 	}
 
 }
