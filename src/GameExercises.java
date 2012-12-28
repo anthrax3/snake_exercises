@@ -39,8 +39,10 @@ public class GameExercises extends GamePanel {
 	    */
 	    
 	    // Add an array for snake positions (x and y)
-	    int[] x = new int[] { 300, 300, 300, 300 };
-	    int[] y = new int[] { xStart, xStart + size + 1, xStart + (size * 2) + 2, xStart + (size * 3) + 3 };
+	    int[] x = new int[] { xStart, xStart, xStart, xStart };
+	    int[] y = new int[] { yStart, yStart + size + 1, 
+	    		yStart + (size * 2) + 2, 
+	    		yStart + (size * 3) + 3 };
 	    
 	    canvas.setColor(c);
 	    canvas.fillRect(x[0], y[0], size, size);
