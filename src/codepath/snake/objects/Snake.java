@@ -32,9 +32,9 @@ public class Snake {
 
 	// Increases the length of the snake's tail by 1
 	// Used to make the snake longer once an apple is eaten
-	// Needs to increment length, and instantiate a new array of a larger size
 	public void growTail() {
-		
+		// Needs to increment snake length
+		// Instantiate a new coordinate array of with larger size
 	}
 
 	// Returns the direction the snake is headed
@@ -51,8 +51,9 @@ public class Snake {
 
 	// Returns true if the snake's head has hit the body; false otherwise
 	// This is a game over condition when the head runs into any part of the body
-	// We need to check for a collision
 	public boolean hasHitTail() {
+		// Check the position of every part of the tail
+		// Returns true if any part has collided with the head
 		return false;
 	}
 

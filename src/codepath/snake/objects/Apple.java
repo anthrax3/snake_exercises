@@ -12,7 +12,7 @@ public class Apple {
 	// Constructor for apple
 	// Setup initial position of the apple
 	// Store the draw size in drawSize field
-	public Apple(int size) {
+	public Apple(int drawSize) {
 		
 	}
 	
