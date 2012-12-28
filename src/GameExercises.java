@@ -3,14 +3,14 @@ import java.awt.Font;
 import java.awt.Graphics;
 
 @SuppressWarnings("serial")
-public class GameExercises extends GamePanel {	
+public class GameExercises extends FirstGamePanel {	
 	
 	// This method is called once a second to redraw the canvas,
 	// so you can do things like animate the snake.
 	public void redrawCanvas(Graphics canvas) {
 		drawLabel(canvas);
 		drawApple(canvas);
-	    drawSnake(canvas, size, x, y);
+	    drawSnake(canvas, drawSize, x, y);
 	}
 	
 	// This method is called once a second, and it is a good place to
@@ -18,6 +18,12 @@ public class GameExercises extends GamePanel {
 	// or the apple.
 	public void onTimer() {
 		moveUp(x, y);
+	}
+	
+	@Override
+	protected void onKeyPress(int keyCode) {
+		// TODO Auto-generated method stub
+		
 	}
 	
 	public void drawLabel(Graphics canvas) {
@@ -43,7 +49,7 @@ public class GameExercises extends GamePanel {
 	// Moves the coordinates for snake up
 	public void moveUp(int[] x, int[] y) {
 		for (int ind = 0; ind < x.length; ind++) {
-			y[ind] = y[ind] - size;
+			y[ind] = y[ind] - drawSize;
 		}
 	}
 }
