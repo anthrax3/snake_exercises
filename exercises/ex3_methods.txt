@@ -1,8 +1,22 @@
-- Methods
-  - Refactor variable exercise
-  - Method they create and call for each el in the array
-  - drawSnake(x, y) - Paints square on canvas
-  - moveUp(snake)
-  - moveDown(snake)
-  - moveLeft(snake)
-  - moveRight(snake)
+Snakes Game
+Exercise 3 - Methods
+
+Goal: Define methods to break up the code into smaller, more readable parts,
+use global variables, and animate the snake.
+
+Description: In this exercise, we will refactor the drawing code into methods
+and create a method to move the snake.
+
+Instructions:
+  1) Open GameExercises.java
+  2) Create methods called drawSnake, drawApple, and drawLabel.
+  3) Move the drawing code from redrawCanvas into the different
+     drawing methods and call the methods from redrawCanvas.
+  4) Create global variables for the snake's position called
+     int[] x and int[] y.
+  5) Update drawSnake to use the global position variables.
+  6) Create a method called moveUp(int[] x, int[] y) that changes
+     the coordinates to move the snake up.  Hint: the y axis goes
+     up and down.
+  7) Call moveUp(x, y) from onTimer to move the snake up one square
+     per second.

@@ -1,6 +1,26 @@
-- Output
-  - Simple graphics (draw a green square, red apple)
+Snakes Game
+Exercise 1 - Output
+
+Goal: Practice simple drawing on a canvas.
+
+Description: In this exercise, we will draw a green square and a red apple.
+
+Instructions:
+  1) Open GameExercises.java
+  2) Modify the method redrawCanvas to draw some a green square and a red apple
+  3) Experiment with drawing other shapes!
+  
+Hints:
+  To draw a red circle (experiment with changing the numbers and see what
+  it does:
     canvas.setColor(Color.RED);
     canvas.fillOval(10, 10, 1, 1);
+
+  To draw a green rectangle:
     canvas.setColor(Color.GREEN);
     canvas.fillRect(15, 15, 5, 5);
+    
+  To draw a label:
+  	Font f = new Font("Helvetica Nueue", Font.BOLD, 24);
+	canvas.setFont(f);
+	canvas.drawString("Exercise 1", 50, 50);

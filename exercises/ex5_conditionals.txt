@@ -1,4 +1,16 @@
+Snakes Game
+Exercise 5 - Conditionals
+
+Goal: Use conditionals to complete the snakes game!
+
+Description: In this exercise, we will refactor our code to use loops,
+so that we can change the length of the snake.
+
+Instructions:
+  1) Open GameExercises.java
+
+
+
 - Conditionals
   - Introduce proper move logic based on current direction
   - Add bounds collision logic of snake and apple.
-  - Handle apple eating

@@ -1,6 +1,26 @@
-- Variables
-  - Simple graphic (draw the snake without loops)
-  - First, draw manually, repeating colors and width
-  - Then, try to change the color and width of the snake
-  - Refactor code so that changing the color and width is easier
-  - Add an array for snake positions	
+Snakes Game
+Exercise 2 - Variables
+
+Goal: Practice defining and using variables and simple array.
+
+Description: In this exercise, we will draw a snake that is 4 squares long.
+
+Instructions:
+  1) Open GameExercises.java
+  2) Modify the method redrawCanvas to draw a green snake
+    a) To draw the snake, draw 4 green squares with a little space between
+       the squares
+  3) Change the snake width
+    a) Instead of modifying the width everywhere, create a variable called
+       snakeWidth.
+    b) Set the snakeWidth variable to different values and choose a good
+       width for the snake.
+  4) Change the snake color
+    a) Instead of modifying the color everywhere, create a variable called
+       snakeColor.
+    b) Set the snakeColor variable to different colors.
+  5) Store the snake in an array
+    a) Create two integer arrays (int[] x, int[] y) to store the coordinates
+       of the squares that form the snake.
+    b) Refactor the snake drawing code so that it uses the array to get the
+       snake coordinates.   
