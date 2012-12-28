@@ -5,17 +5,11 @@ import java.awt.Graphics;
 @SuppressWarnings("serial")
 public class GameExercises extends GamePanel {	
 	
-	// Implement the drawing here
-	public void redrawCanvas(Graphics canvas) {	
-		// Keep the apple we drew from exercise 1
-		canvas.setColor(Color.RED);
-	    canvas.fillOval(150, 150, 25, 25);
-	    canvas.setColor(Color.BLUE);
-	    Font f = new Font("Helvetica Nueue", Font.BOLD, 24);
-		canvas.setFont(f);
-	    canvas.drawString("Exercise 3", 50, 50);
-	    
-	    // Invoke method for exercise 3
+	// This method is called once a second to redraw the canvas,
+	// so you can do things like animate the snake.
+	public void redrawCanvas(Graphics canvas) {
+		drawLabel(canvas);
+		drawApple(canvas);
 	    drawSnake(canvas, size, x, y);
 	}
 	
@@ -24,6 +18,18 @@ public class GameExercises extends GamePanel {
 	// or the apple.
 	public void onTimer() {
 		moveUp(x, y);
+	}
+	
+	public void drawLabel(Graphics canvas) {
+		canvas.setColor(Color.BLUE);
+	    Font f = new Font("Helvetica Nueue", Font.BOLD, 24);
+		canvas.setFont(f);
+	    canvas.drawString("Exercise 3", 50, 50);
+	}
+	
+	public void drawApple(Graphics canvas) {
+		canvas.setColor(Color.RED);
+	    canvas.fillOval(150, 150, 25, 25);
 	}
 	
 	public void drawSnake(Graphics canvas, int size, int[] x, int[] y) {
