@@ -4,14 +4,14 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 @SuppressWarnings("serial")
-public class GameExercises extends GamePanel {	
+public class GameExercises extends FirstGamePanel {	
 
 	// This method is called once a second to redraw the canvas,
 	// so you can do things like animate the snake.
 	public void redrawCanvas(Graphics canvas) {
 		drawLabel(canvas);
 		drawApple(canvas);
-		drawSnake(canvas, size, x, y);
+		drawSnake(canvas, drawSize, x, y);
 	}
 
 	// This method is called once a second, and it is a good place to
@@ -57,13 +57,13 @@ public class GameExercises extends GamePanel {
 		// Based on the current direction, we need to
 		// move the head tile towards the next tile in that direction...
 		if (direction == "left") {
-			x[0] -= size;
+			x[0] -= drawSize;
 		} else if (direction == "right") {
-			x[0] += size;
+			x[0] += drawSize;
 		} else if (direction == "up") {
-			y[0] -= size;
+			y[0] -= drawSize;
 		} else if (direction == "down") {
-			y[0] += size;
+			y[0] += drawSize;
 		}
 	}
 	
