@@ -1,0 +1,4 @@
+- ArrayList
+  - Make original array require copy to new array to grow snake
+  - Refactor all arrays into ArrayLists
+  - Refactor x and y arrays to use an ArrayList<Point>

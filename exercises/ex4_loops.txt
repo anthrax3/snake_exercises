@@ -1,0 +1,3 @@
+- Loops
+  - Draw variable length snakes
+  - Refactor move using loops

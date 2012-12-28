@@ -1,0 +1,6 @@
+- Output
+  - Simple graphics (draw a green square, red apple)
+    canvas.setColor(Color.RED);
+    canvas.fillOval(10, 10, 1, 1);
+    canvas.setColor(Color.GREEN);
+    canvas.fillRect(15, 15, 5, 5);

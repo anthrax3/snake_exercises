@@ -1,0 +1,4 @@
+- Inheritance
+  - Refactor the snake and apple using inheritance?
+  - Add a hole tile.
+  - Item represents apple or hole

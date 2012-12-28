@@ -1,0 +1,6 @@
+- Variables
+  - Simple graphic (draw the snake without loops)
+  - First, draw manually, repeating colors and width
+  - Then, try to change the color and width of the snake
+  - Refactor code so that changing the color and width is easier
+  - Add an array for snake positions	

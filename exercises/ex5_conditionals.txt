@@ -1,0 +1,4 @@
+- Conditionals
+  - Introduce proper move logic based on current direction
+  - Add bounds collision logic of snake and apple.
+  - Handle apple eating

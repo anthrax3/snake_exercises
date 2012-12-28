@@ -1,0 +1,8 @@
+- Methods
+  - Refactor variable exercise
+  - Method they create and call for each el in the array
+  - drawSnake(x, y) - Paints square on canvas
+  - moveUp(snake)
+  - moveDown(snake)
+  - moveLeft(snake)
+  - moveRight(snake)

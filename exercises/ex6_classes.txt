@@ -1,0 +1,3 @@
+- Classes
+  - Introduce a snake and apple class with getters, setters, constructors
+  - Have them fill in the snake and apple classes
