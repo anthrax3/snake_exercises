@@ -1,37 +1,39 @@
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Point;
+import java.util.ArrayList;
 import java.util.Arrays;
 
 public class Snake {
 	private int drawSize;
 	private int length;
-	private Point[] pos;
+	private ArrayList<Point> pos;
 	private String direction;
 	
 	public Snake(int size) {
 		this.direction = "up";
 		this.length = 3;
-		this.pos = new Point[this.length+1];
 		this.drawSize = size;
+		this.pos = new ArrayList<Point>();
 		for (int ind = 0; ind <= length; ind++) {
-			Point pind = pos[ind] = new Point();
+			this.pos.add(new Point());
+			Point pind = pos.get(ind);
 			pind.x = 300;
 			pind.y = 300 + (ind * drawSize);
 		}
 	}
 	
 	public int getHeadPosX() {
-		return pos[0].x;
+		return pos.get(0).x;
 	}
 	
 	public int getHeadPosY() {
-		return pos[0].y;
+		return pos.get(0).y;
 	}
 	
 	public boolean hasHitTail() {
 		for (int ind = length; ind > 0; ind--) {
-			if ((pos[0].x == pos[ind].x) && (pos[0].y == pos[ind].y)) {
+			if ((pos.get(0).x == pos.get(ind).x) && (pos.get(0).y == pos.get(ind).y)) {
 				return true;
 			}
 		}
@@ -40,8 +42,7 @@ public class Snake {
 	
 	public void growTail() {
 		length++;
-		pos = Arrays.copyOf(pos, pos.length + 1);
-		pos[pos.length - 1] = new Point();
+		pos.add(new Point());
 	}
 
 	public String getDirection() {
@@ -57,20 +58,20 @@ public class Snake {
 		// move each tile (except the head) so that every tile is now equal
 		// to the previous tile (to move all tiles).
 		for (int ind = length; ind > 0; ind--) {
-			pos[ind].x = pos[ind - 1].x;
-			pos[ind].y = pos[ind - 1].y;
+			pos.get(ind).x = pos.get(ind - 1).x;
+			pos.get(ind).y = pos.get(ind - 1).y;
 		}
 
 		// Based on the current direction, we need to
 		// move the head tile towards the next tile in that direction...
 		if (getDirection() == "left") {
-			pos[0].x -= drawSize;
+			pos.get(0).x -= drawSize;
 		} else if (getDirection() == "right") {
-			pos[0].x += drawSize;
+			pos.get(0).x += drawSize;
 		} else if (getDirection() == "up") {
-			pos[0].y -= drawSize;
+			pos.get(0).y -= drawSize;
 		} else if (getDirection() == "down") {
-			pos[0].y += drawSize;
+			pos.get(0).y += drawSize;
 		}
 	}
 	
@@ -78,7 +79,7 @@ public class Snake {
 		Color c = Color.GREEN;
 		canvas.setColor(c);
 		for (int ind = 0; ind < length; ind++) {
-			canvas.fillRect(pos[ind].x, pos[ind].y, drawSize, drawSize);
+			canvas.fillRect(pos.get(ind).x, pos.get(ind).y, drawSize, drawSize);
 		}
 	}
 }
