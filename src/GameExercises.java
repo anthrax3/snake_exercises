@@ -2,11 +2,12 @@ import java.awt.Graphics;
 
 @SuppressWarnings("serial")
 public class GameExercises extends FirstGamePanel {
-	// Implement the drawing here
-	public void redrawCanvas(Graphics canvas) {	
+	// This method is called once a second to redraw the canvas,
+	// so you can do things like draw the snake.
+	public void redrawCanvas(Graphics canvas) {
 
 	}
-	
+
 	// This method is called once a second, and it is a good place to
 	// do things like check if the snake has collided into the wall
 	// or the apple.
