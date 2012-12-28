@@ -1,3 +1,5 @@
+package codepath.snake.scaffold;
+
 @SuppressWarnings("serial")
 public abstract class FirstGamePanel extends GamePanel {
   int[] x;

@@ -1,4 +1,7 @@
+package codepath.snake.scaffold;
 import javax.swing.JFrame;
+
+import codepath.snake.exercise.GameExercises;
 
 public class GameRunner {
 	public static void main(String[] args) {

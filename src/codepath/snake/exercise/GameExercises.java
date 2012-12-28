@@ -1,4 +1,9 @@
+package codepath.snake.exercise;
+
+
 import java.awt.Graphics;
+import codepath.snake.scaffold.*;
+
 
 @SuppressWarnings("serial")
 public class GameExercises extends FirstGamePanel {
