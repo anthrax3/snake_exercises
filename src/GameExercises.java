@@ -2,6 +2,7 @@ import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
+import java.util.Arrays;
 
 @SuppressWarnings("serial")
 public class GameExercises extends FirstGamePanel {	
@@ -89,8 +90,9 @@ public class GameExercises extends FirstGamePanel {
 		// apple is then consumed
 		if ((x[0] == appleX) && (y[0] == appleY)) {
 			snakeLength++;
-			x = createArrayFromOldArrayWithSize(x, x.length + 1);
-			y = createArrayFromOldArrayWithSize(y, y.length + 1);
+			
+			x = Arrays.copyOf(x, x.length + 1);
+			y = Arrays.copyOf(y, y.length + 1);
 			repositionApple();
 		}		
 	}

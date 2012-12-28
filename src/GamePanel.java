@@ -90,11 +90,4 @@ public abstract class GamePanel extends JPanel implements ActionListener {
       onKeyPress(e.getKeyCode());
     }
   }
-
-  // Arrays
-  // createArrayFromOldArrayWithSize(oldArray, 10);
-  int[] createArrayFromOldArrayWithSize(int[] org, int size) {
-      int[] result = Arrays.copyOf(org, size);
-      return result;
-  }
 }
