@@ -1,12 +1,10 @@
 
 import java.awt.Graphics;
-import java.awt.Rectangle;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyAdapter;
 import java.awt.event.KeyEvent;
-import java.util.Arrays;
 
 import javax.swing.JPanel;
 import javax.swing.Timer;
@@ -51,18 +49,6 @@ public abstract class GamePanel extends JPanel implements ActionListener {
     return WIDTH;
   }
 
-  protected int randomCoordForPanel(int max) {
-    int multiplier = max / drawSize;
-    int randomCoordinate = (int) (Math.random() * multiplier);
-    return randomCoordinate * drawSize;
-  }
-
-  protected boolean hasObjectCollision(int x1, int y1, int x2, int y2) {
-    Rectangle rx1 = new Rectangle(x1, y1, drawSize, drawSize);
-      Rectangle rx2 = new Rectangle(x2, y2, drawSize, drawSize);
-      return rx1.intersects(rx2);
-  }
-
   // Draws every time the component is painted
   // This contains the contents of the frame
   public void paintComponent(Graphics canvas) {
@@ -90,12 +76,5 @@ public abstract class GamePanel extends JPanel implements ActionListener {
     public void keyPressed(KeyEvent e) {
       onKeyPress(e.getKeyCode());
     }
-  }
-
-  // Arrays
-  // createArrayFromOldArrayWithSize(oldArray, 10);
-  int[] createArrayFromOldArrayWithSize(int[] org, int size) {
-      int[] result = Arrays.copyOf(org, size);
-      return result;
   }
 }
