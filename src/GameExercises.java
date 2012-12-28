@@ -12,7 +12,7 @@ public class GameExercises extends GamePanel {
 	    canvas.setColor(Color.BLUE);
 	    Font f = new Font("Helvetica Nueue", Font.BOLD, 24);
 		canvas.setFont(f);
-	    canvas.drawString("Exercise 1", 30, 50);
+	    canvas.drawString("Exercise 2", 50, 50);
 
 	    // Simple graphic (draw the snake without loops)
 	    // First, draw manually, repeating colors and width
