@@ -1,3 +1,5 @@
+import java.awt.Color;
+import java.awt.Font;
 import java.awt.Graphics;
 
 @SuppressWarnings("serial")
@@ -13,6 +15,6 @@ public class GameExercises extends GamePanel {
 	    canvas.setColor(Color.BLUE);
 	    Font f = new Font("Helvetica Nueue", Font.BOLD, 24);
 		canvas.setFont(f);
-	    canvas.drawString("Exercise 1", 50, 50);
+	    canvas.drawString("Exercise 1", 30, 50);
 	}
 }
