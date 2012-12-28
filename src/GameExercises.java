@@ -20,10 +20,12 @@ public class GameExercises extends FirstGamePanel {
 		moveUp(x, y);
 	}
 	
-	@Override
+	// This method is called whenever a keyboard button is pressed
+	// within your game. The keyCode represents the key the actual key pushed.
+	// You can check which keyCode using 'KeyEvent' constants.
+	// i.e keyCode == KeyEvent.VK_G
 	protected void onKeyPress(int keyCode) {
-		// TODO Auto-generated method stub
-		
+				
 	}
 	
 	public void drawLabel(Graphics canvas) {
