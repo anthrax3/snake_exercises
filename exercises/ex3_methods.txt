@@ -13,10 +13,9 @@ Instructions:
   3) Move the drawing code from redrawCanvas into the different
      drawing methods and call the methods from redrawCanvas.
   4) Create global variables for the snake's position called
-     int[] x and int[] y.
+     int[] xSnakePos and int[] ySnakePos.
   5) Update drawSnake to use the global position variables.
-  6) Create a method called moveUp(int[] x, int[] y) that changes
-     the coordinates to move the snake up.  Hint: the y axis goes
-     up and down.
-  7) Call moveUp(x, y) from onTimer to move the snake up one square
-     per second.
+  6) Create a method called moveUp() that changes
+     the coordinates in the position arrays to move the snake up.  
+     Hint: the y axis goes up and down.
+  7) Call moveUp() from onTimer to move the snake up one square per second.
