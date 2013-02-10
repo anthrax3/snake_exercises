@@ -36,6 +36,7 @@ public abstract class GamePanel extends JPanel implements ActionListener {
 	protected void startGame() {
 		isGameRunning = true;
 		timer.start();
+		onStart();
 	}
 
 	protected void pauseGame() {
@@ -67,9 +68,15 @@ public abstract class GamePanel extends JPanel implements ActionListener {
 		onTimer();
 		repaint();
 	}
-
+	
+	// This method is called when the game first launches. Use this to
+	// initialize variables and set starting values.
+	public abstract void onStart();
+	// Called every second to apply game logic
 	protected abstract void onTimer();
+	// Called every second to redrawCanvas
 	protected abstract void redrawCanvas(Graphics canvas);
+	// Handles key presses within our game
 	protected abstract void onKeyPress(int keyCode);
 
 	// LISTENER

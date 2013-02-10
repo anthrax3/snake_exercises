@@ -9,10 +9,11 @@ public class GameObjectExercises extends GamePanel {
 	private Snake snake;
 	private Apple apple;
 	
-	// Constructor for GameObjectExercises
-	public GameObjectExercises() {
+	// This method is called when the game first launches. Use this to
+    // initialize variables and set starting values.
+	public void onStart() {
 		// Instantiate snake object
-		// Instantiate apple object
+	    // Instantiate apple object
 	}
 	
 	// This method is called once a second to redraw the canvas,

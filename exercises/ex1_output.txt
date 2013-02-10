@@ -11,14 +11,13 @@ Instructions:
   3) Experiment with drawing other shapes!
   
 Hints:
-  To draw a red circle (experiment with changing the numbers and see what
-  it does:
+  To draw a red circle (experiment with changing the numbers and see what it does):
     canvas.setColor(Color.RED);
-    canvas.fillOval(10, 10, 1, 1);
+    canvas.fillOval(10, 10, 20, 20);
 
   To draw a green rectangle:
     canvas.setColor(Color.GREEN);
-    canvas.fillRect(15, 15, 5, 5);
+    canvas.fillRect(15, 15, 20, 20);
     
   To draw a label:
   	Font f = new Font("Helvetica Nueue", Font.BOLD, 24);
