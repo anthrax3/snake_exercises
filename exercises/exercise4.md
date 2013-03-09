@@ -3,30 +3,18 @@ layout: exercises
 title: Exercise 4
 ---
 
-## Exercise 4 - Interaction
+## Exercise 4 - Loops
 
-The goal of this exercise is to handle clicks to various areas of the Twitter app.
+**Goal**: Practice using loops.
 
-- ComposeActivity
-   - Hook up the Tweet button to create a new tweet using the text in the EditText control. Print out a message if the post is successful or not. See the hints for an example of how to use the TwitterClient class.
-- TimelineActivity
-   - When a user taps on a row in the ListView, toast the text of the tweet that they clicked on.
+**Description**: In this exercise, we will refactor our code to use loops,
+so that we can change the length of the snake.
 
-### Hints
+### Instructions
 
-Using the Twitter client to post a Tweet.
+1. Open `GameExercises.java` file
+2. Refactor the snake drawing code to use a loop instead of manually
+   drawing the snake.
+3. Try changing the length of the snake to 8.
+4. Refactor the `moveUp` code to use a for loop.
 
-{% highlight java %}
-TwitterClient client = new TwitterClient();
-client.postTweet("This is the tweet body!", new AsyncHttpResponseHandler() {
-    public void onSuccess(String jsonTweetString) {
-        Log.d("Successfully posted tweet!");
-    }
-
-    public void onFailure(Exception e) {
-        Log.d("DEBUG", "Post reply error: " + e.toString());
-        Toast.makeText(ComposeActivity.this, "Error posting tweet! ", 
-          Toast.LENGTH_SHORT).show();
-    }
-});
-{% endhighlight %}
